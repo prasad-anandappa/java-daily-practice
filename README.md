@@ -27,3 +27,4 @@ java TwoSum
 | Day | Topic | Focus |
 |-----|-------|-------|
 | 001 | Two Sum | HashMap, single-pass lookup, O(n) |
+| 002 | Maximum Subarray | Arrays, Kadane's algorithm, O(n) |
