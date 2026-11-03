@@ -28,3 +28,4 @@ java TwoSum
 |-----|-------|-------|
 | 001 | Two Sum | HashMap, single-pass lookup, O(n) |
 | 002 | Maximum Subarray | Arrays, Kadane's algorithm, O(n) |
+| 003 | Trapping Rain Water | Two pointers, left/right maxima, O(n) time O(1) space |
