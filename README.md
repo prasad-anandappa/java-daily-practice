@@ -30,3 +30,4 @@ java TwoSum
 | 002 | Maximum Subarray | Arrays, Kadane's algorithm, O(n) |
 | 003 | Trapping Rain Water | Two pointers, left/right maxima, O(n) time O(1) space |
 | 004 | Minimum Window Substring | Sliding window, frequency counts, O(n) time |
+| 005 | Largest Rectangle in Histogram | Monotonic stack, previous/next smaller boundaries, O(n) time |
