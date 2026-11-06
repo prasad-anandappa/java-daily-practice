@@ -32,3 +32,4 @@ java TwoSum
 | 004 | Minimum Window Substring | Sliding window, frequency counts, O(n) time |
 | 005 | Largest Rectangle in Histogram | Monotonic stack, previous/next smaller boundaries, O(n) time |
 | 006 | Median of Two Sorted Arrays | Binary search on partition, O(log(min(m, n))) |
+| 007 | Reverse Nodes in k-Group | Linked list, in-place group reversal, O(n) time O(1) space |
