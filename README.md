@@ -35,3 +35,4 @@ java TwoSum
 | 007 | Reverse Nodes in k-Group | Linked list, in-place group reversal, O(n) time O(1) space |
 | 008 | Binary Tree Maximum Path Sum | Binary tree, post-order DFS, downward gain vs bend-through best, O(n) time |
 | 009 | Swim in Rising Water | Graph traversal, minimax Dijkstra, bottleneck path, O(n² log n) time |
+| 010 | Burst Balloons | Recursion & memoised DP, interval DP, last-burst decomposition, O(n^3) time |
