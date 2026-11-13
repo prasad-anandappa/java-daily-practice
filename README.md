@@ -40,3 +40,4 @@ java TwoSum
 | 012 | Word Ladder II | Graphs & strings, BFS parent DAG + DFS enumeration, O(N · L · 26) time |
 | 013 | Multithreaded Web Crawler | Java concurrency, ForkJoin work-stealing, atomic visited claim, exactly-once parallel fetch, O(V + E) time |
 | 014 | LFU Cache | Collections internals, HashMap + per-frequency doubly linked lists, minFreq tracking, O(1) get/put |
+| 015 | Shortest Palindrome | Arrays & strings, KMP prefix function, longest palindromic prefix, O(n) time |
