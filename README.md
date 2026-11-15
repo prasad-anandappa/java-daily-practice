@@ -42,3 +42,4 @@ java TwoSum
 | 014 | LFU Cache | Collections internals, HashMap + per-frequency doubly linked lists, minFreq tracking, O(1) get/put |
 | 015 | Shortest Palindrome | Arrays & strings, KMP prefix function, longest palindromic prefix, O(n) time |
 | 016 | Max Points on a Line | HashMap patterns, reduced slope canonicalisation (gcd + sign), exact integer geometry, O(n^2) time |
+| 017 | K-th Smallest Pair Distance | Two pointers, binary search on answer + monotone pair counting, O(n log n + n log W) time |
