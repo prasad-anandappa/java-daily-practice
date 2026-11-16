@@ -1,0 +1,13 @@
+# Day 018 — Sliding Window Median
+
+**Problem.** Given an integer array `nums` and a window size `k`, slide a window of `k` consecutive elements from left to right and return the median of each window — the middle value for odd `k`, or the mean of the two middle values for even `k`. (LeetCode 480, Hard.)
+
+**Approach.** Sliding window over two ordered multisets, each a `TreeMap` from value to count. `lo` holds the smaller half of the window and `hi` the larger half, under two invariants: every value in `lo` is at most every value in `hi`, and `loSize` is either `hiSize` or `hiSize + 1`. The median is then read off the boundary — `lo`'s largest key for odd `k`, or the mean of `lo`'s largest and `hi`'s smallest keys for even `k`, formed in `long` arithmetic so a pair of `Integer.MAX_VALUE`s cannot overflow. An incoming element joins `lo` when it is at most `lo`'s current maximum and `hi` otherwise; the outgoing element deletes one occurrence from whichever side holds it (a value present on both sides has equal copies, so deleting from `lo` is interchangeable). Either move can break the size invariant by one, and rebalancing repairs it by moving `lo`'s maximum into `hi` or `hi`'s minimum into `lo`, which preserves the ordering invariant at the same time. `main` cross-checks against an independent brute-force oracle — sort a copy of every window and pick the middle — over 500 randomised arrays, verifying *every* `k` for each array, including duplicates, negatives, and the int-extreme overflow cases.
+
+**Complexity.** O(n log k) time, O(k) space: each slide is one insertion, one deletion, and at most one rebalancing move, each a `TreeMap` operation over at most `k` distinct values. Sorting each window from scratch is O(n · k log k) time; the oracle does exactly that and only appears in the tests.
+
+**Takeaways.**
+- A sliding window that must answer an order statistic cannot use the usual frequency-count trick — it needs the window *sorted*, and splitting it into two balanced ordered halves makes the one statistic it must report, the median, an O(log k) boundary read instead of a scan.
+- The invariants do the work: size (`lo` never smaller than `hi`, never more than one larger) plus ordering (all of `lo` ≤ all of `hi`) together *define* the median's location, so every update only has to restore them locally.
+- Duplicates are why the multisets store counts, not single values — and why a value straddling the split can be removed from either side: equal copies are interchangeable, a fact the duplicate-heavy checks lean on.
+- The even-`k` mean is an overflow trap, not arithmetic trivia: `(a + b) / 2` in `int` wraps for large same-sign pairs, so the sum is formed in `long` before dividing.
