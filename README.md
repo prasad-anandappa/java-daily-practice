@@ -44,3 +44,4 @@ java TwoSum
 | 016 | Max Points on a Line | HashMap patterns, reduced slope canonicalisation (gcd + sign), exact integer geometry, O(n^2) time |
 | 017 | K-th Smallest Pair Distance | Two pointers, binary search on answer + monotone pair counting, O(n log n + n log W) time |
 | 018 | Sliding Window Median | Sliding window, two ordered multisets (TreeMap split at median), O(n log k) time |
+| 019 | Shortest Subarray with Sum at Least K | Stack/queue, monotonic deque over prefix sums, O(n) time |
