@@ -45,3 +45,4 @@ java TwoSum
 | 017 | K-th Smallest Pair Distance | Two pointers, binary search on answer + monotone pair counting, O(n log n + n log W) time |
 | 018 | Sliding Window Median | Sliding window, two ordered multisets (TreeMap split at median), O(n log k) time |
 | 019 | Shortest Subarray with Sum at Least K | Stack/queue, monotonic deque over prefix sums, O(n) time |
+| 020 | Merge k Sorted Lists | Linked list, divide-and-conquer pairwise merging, O(N log k) time |
