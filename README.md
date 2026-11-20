@@ -47,3 +47,4 @@ java TwoSum
 | 019 | Shortest Subarray with Sum at Least K | Stack/queue, monotonic deque over prefix sums, O(n) time |
 | 020 | Merge k Sorted Lists | Linked list, divide-and-conquer pairwise merging, O(N log k) time |
 | 021 | Binary Tree Cameras | Binary tree, greedy post-order DFS (needs-cover / has-camera / covered states), brute-force oracle cross-check, O(n) time |
+| 022 | Critical Connections in a Network | Graph traversal, Tarjan bridges, DFS low-link (disc/low), brute-force oracle cross-check, O(V + E) time |
