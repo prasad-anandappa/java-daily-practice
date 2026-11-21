@@ -1,0 +1,12 @@
+# Day 023 — Regular Expression Matching
+
+**Problem.** Given a string `s` and a pattern `p`, return whether `p` matches the *entire* string. `.` matches any single character; `*` matches zero or more copies of the preceding element. The pattern is valid: `*` never appears first and never follows another `*`. (LeetCode 10, Hard.)
+
+**Approach.** Recursion with memoisation over suffix positions. `solve(i, j)` asks whether `s[i..]` matches `p[j..]`. Let `firstMatch` be whether `s[i]` exists and agrees with `p[j]` (equal, or `p[j]` is `.`). The only real branch in the problem is a `*` at `p[j + 1]`: either skip the starred element entirely (`solve(i, j + 2)`, zero copies) or — if `firstMatch` — consume one copy and stay on the same pattern position so more copies can follow (`solve(i + 1, j)`). Without a star the step is forced: `firstMatch && solve(i + 1, j + 1)`. The base case is that the pattern is exhausted exactly when the string is, too. The naive recursion revisits the same `(i, j)` state exponentially many times through the star branch, but there are only `(n + 1) · (m + 1)` distinct states, so memoising collapses the search to polynomial time. The `main` cross-checks the memoised recursion against an independent bottom-up DP over the same states — exhaustively on all strings over `{a, b}` up to length 4 against all patterns of up to 3 atoms (each optionally starred), plus 2,000 seeded random cases — in addition to the known LeetCode answers and empty-input boundaries.
+
+**Complexity.** O(n · m) time — one constant-time decision per `(i, j)` state. O(n · m) space for the memo table (plus O(n + m) recursion depth). The unmemoised recursion is exponential in the worst case, which is exactly the gap memoisation closes here.
+
+**Takeaways.**
+- A `*` is the only nondeterminism in this matcher — every other position is forced. Naming the single branch point first turns a scary problem into a two-line recurrence.
+- Overlapping subproblems hide in branching recursions, not just in obvious grids: the star's "consume one and stay" step is what makes states repeat, and counting the distinct states (`(n + 1) · (m + 1)`) is what proves memoisation helps before writing any code.
+- Keeping a second, structurally different implementation (bottom-up vs top-down) as a test oracle catches recurrence-direction bugs that hand-picked examples miss — exhaustive small-case agreement is far stronger evidence than a handful of memorised answers.
