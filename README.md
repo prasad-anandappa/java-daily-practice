@@ -50,3 +50,4 @@ java TwoSum
 | 022 | Critical Connections in a Network | Graph traversal, Tarjan bridges, DFS low-link (disc/low), brute-force oracle cross-check, O(V + E) time |
 | 023 | Regular Expression Matching | Recursion & memoised DP, suffix-state (i, j) recurrence, star zero/one-consume branch, bottom-up oracle cross-check, O(n · m) time |
 | 024 | Split Array Largest Sum | Sorting & binary search, binary search on answer + greedy feasibility, DP oracle cross-check, O(n log S) time |
+| 025 | Building H2O | Java concurrency, semaphore admission caps (2H + 1O) + CyclicBarrier rendezvous, reusable molecule synchroniser, deadlock-detecting checks, O(1) sync state |
