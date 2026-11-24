@@ -51,3 +51,4 @@ java TwoSum
 | 023 | Regular Expression Matching | Recursion & memoised DP, suffix-state (i, j) recurrence, star zero/one-consume branch, bottom-up oracle cross-check, O(n · m) time |
 | 024 | Split Array Largest Sum | Sorting & binary search, binary search on answer + greedy feasibility, DP oracle cross-check, O(n log S) time |
 | 025 | Building H2O | Java concurrency, semaphore admission caps (2H + 1O) + CyclicBarrier rendezvous, reusable molecule synchroniser, deadlock-detecting checks, O(1) sync state |
+| 026 | All O(1) Data Structure | Collections internals, count-bucketed doubly linked list + HashMap key->bucket, sentinel head/tail, O(1) inc/dec/getMax/getMin |
