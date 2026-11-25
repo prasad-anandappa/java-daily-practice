@@ -52,3 +52,4 @@ java TwoSum
 | 024 | Split Array Largest Sum | Sorting & binary search, binary search on answer + greedy feasibility, DP oracle cross-check, O(n log S) time |
 | 025 | Building H2O | Java concurrency, semaphore admission caps (2H + 1O) + CyclicBarrier rendezvous, reusable molecule synchroniser, deadlock-detecting checks, O(1) sync state |
 | 026 | All O(1) Data Structure | Collections internals, count-bucketed doubly linked list + HashMap key->bucket, sentinel head/tail, O(1) inc/dec/getMax/getMin |
+| 027 | Text Justification | Arrays & strings, greedy line packing + exact space distribution (extras left), O(output) time |
