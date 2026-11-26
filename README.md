@@ -53,3 +53,4 @@ java TwoSum
 | 025 | Building H2O | Java concurrency, semaphore admission caps (2H + 1O) + CyclicBarrier rendezvous, reusable molecule synchroniser, deadlock-detecting checks, O(1) sync state |
 | 026 | All O(1) Data Structure | Collections internals, count-bucketed doubly linked list + HashMap key->bucket, sentinel head/tail, O(1) inc/dec/getMax/getMin |
 | 027 | Text Justification | Arrays & strings, greedy line packing + exact space distribution (extras left), O(output) time |
+| 028 | Random Pick with Blacklist | HashMap/HashSet patterns, virtual remapping of blacklisted draws to tail values, O(B) space O(1) pick |
