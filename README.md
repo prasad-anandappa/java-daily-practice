@@ -54,3 +54,4 @@ java TwoSum
 | 026 | All O(1) Data Structure | Collections internals, count-bucketed doubly linked list + HashMap key->bucket, sentinel head/tail, O(1) inc/dec/getMax/getMin |
 | 027 | Text Justification | Arrays & strings, greedy line packing + exact space distribution (extras left), O(output) time |
 | 028 | Random Pick with Blacklist | HashMap/HashSet patterns, virtual remapping of blacklisted draws to tail values, O(B) space O(1) pick |
+| 029 | Alien Dictionary | Graph traversal, topological sort (Kahn + min-heap), first-difference edges + prefix contradiction, brute-force oracle cross-check, O(C + V + E) time |
