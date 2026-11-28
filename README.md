@@ -55,3 +55,4 @@ java TwoSum
 | 027 | Text Justification | Arrays & strings, greedy line packing + exact space distribution (extras left), O(output) time |
 | 028 | Random Pick with Blacklist | HashMap/HashSet patterns, virtual remapping of blacklisted draws to tail values, O(B) space O(1) pick |
 | 029 | Alien Dictionary | Graph traversal, topological sort (Kahn + min-heap), first-difference edges + prefix contradiction, brute-force oracle cross-check, O(C + V + E) time |
+| 030 | Remove Boxes | Recursion & memoised DP, interval DP with attached-group state (l, r, k), brute-force oracle cross-check, O(n^4) time |
